@@ -3,16 +3,16 @@ use strict;
 use warnings;
 use parent 'Exporter';
 
-our $VERSION = '0.03';
+our $VERSION = '0.04';
 our @EXPORT  = qw/number string bool/;
 
 sub number($) {
-    return unless defined $_[0];
+    return undef unless defined $_[0];
     $_[0] + 0;
 }
 
 sub string($) {
-    return unless defined $_[0];
+    return undef unless defined $_[0];
     $_[0] . '';
 }
 
